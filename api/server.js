@@ -26,7 +26,7 @@ router.render = (req, res) => {
         });
     } else {
         res.jsonp({
-            // data: res.locals.data
+            users: res.locals.data
         });
     }
     if (res.statusCode === 404) {

@@ -17,6 +17,15 @@
       "phone": "5971230770",
       "roles": "Moderator",
       "is_active": false
-  }
+    },
+    {
+      "id": 3,
+      "first_name": "Estrellitaaaa",
+      "last_name": "Almeida",
+      "email": "ealmeida0@php.net",
+      "phone": "5971230770",
+      "roles": "Moderator",
+      "is_active": false
+    }
   ]
 }
