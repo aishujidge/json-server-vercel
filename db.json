@@ -1,13 +1,22 @@
 {
   "users": [
     {
-      "id": 7048,
+      "id": 1,
       "first_name": "Estrellita",
       "last_name": "Almeida",
       "email": "ealmeida0@php.net",
       "phone": "5971230770",
       "roles": "Moderator",
       "is_active": false
-    }
+    },
+    {
+      "id": 2,
+      "first_name": "Danish",
+      "last_name": "Shaikh",
+      "email": "ealmeida0@php.net",
+      "phone": "5971230770",
+      "roles": "Moderator",
+      "is_active": false
+  }
   ]
 }
