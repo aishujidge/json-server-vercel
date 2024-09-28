@@ -1,9 +1,13 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+  "users": [
+    {
+      "id": 7048,
+      "first_name": "Estrellita",
+      "last_name": "Almeida",
+      "email": "ealmeida0@php.net",
+      "phone": "5971230770",
+      "roles": "Moderator",
+      "is_active": false
+    }
+  ]
 }
