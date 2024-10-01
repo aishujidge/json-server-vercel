@@ -15,6 +15,14 @@
             "roles": "editor",
             "isActive": false
         }
+    ],
+    "events": [
+        {
+            "id": "event_001",
+            "title": "NBA 2024-25 Season Kickoff",
+            "description": "The NBA 2024-25 season begins with a highly anticipated match between the Boston Celtics and the New York Knicks, marking the start of the season. Fans are excited to see the reigning champions, the Celtics, defend their title.",
+            "category": "Sports",
+            "date": "2024-10-22"
+        }
     ]
-    
 }
