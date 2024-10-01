@@ -11,6 +11,8 @@ server.use(middlewares);
 server.use(jsonServer.rewriter({
     '/ims/api/users': '/users',
     '/ims/api/users/:id': '/users/:id',
+    '/ims/api/events': '/events',
+    '/ims/api/events/:id': '/events/:id'
 }));
 router.render = (req, res) => {
     const method = req.method;
