@@ -13,7 +13,7 @@ server.use(jsonServer.rewriter({
     '/ims/api/users/:id': '/users/:id',
     '/ims/api/events': '/events',            
     '/ims/api/events/:id': '/events/:id',
-    '/ims/api/event-names': '/events'
+    '/ims/api/event-titles': '/events'
 }));
 
 router.render = (req, res) => {
@@ -72,7 +72,7 @@ router.render = (req, res) => {
         });
     }
 };
-server.get('/ims/api/event-names', (req, res) => {
+server.get('/ims/api/event-titles', (req, res) => {
     const eventTitles = db.events.map(event => event.title);
     res.jsonp({
         eventNames: eventTitles

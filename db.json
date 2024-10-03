@@ -25,6 +25,15 @@
             "date": "2024-10-22",
             "time": "19:30",
             "status": "Upcoming"
+        },
+        {
+            "id": "event_002",
+            "title": "Tech Innovation Summit 2024",
+            "description": "A global conference where technology leaders discuss the latest innovations in AI, cloud computing, and blockchain technology.",
+            "category": "Conference",
+            "date": "2024-11-05",
+            "time": "09:00",
+            "status": "Upcoming"
         }
     ]
 }
