@@ -11,8 +11,9 @@ server.use(middlewares);
 server.use(jsonServer.rewriter({
     '/ims/api/users': '/users',
     '/ims/api/users/:id': '/users/:id',
-    '/ims/api/events': '/events',              // Add this line
-    '/ims/api/events/:id': '/events/:id'       // Add this line
+    '/ims/api/events': '/events',            
+    '/ims/api/events/:id': '/events/:id',
+    '/ims/api/event-names': '/events'
 }));
 
 router.render = (req, res) => {
@@ -21,12 +22,12 @@ router.render = (req, res) => {
     if (method === 'POST' && res.statusCode === 201) {
         res.jsonp({
             message: `${resource.charAt(0).toUpperCase() + resource.slice(1)} created successfully`,
-            // data: res.locals.data
+            
         });
     } else if (method === 'PUT' && res.statusCode === 200) {
         res.jsonp({
             message: `${resource.charAt(0).toUpperCase() + resource.slice(1)} updated successfully`,
-            // data: res.locals.data
+            
         });
     } else if (method === 'DELETE' && res.statusCode === 200) {
         res.jsonp({
@@ -45,7 +46,7 @@ router.render = (req, res) => {
 };
 router.render = (req, res) => {
     const method = req.method;
-    const resource = req.url.includes('/events') ? 'event' : 'user'; // Add dynamic resource detection
+    const resource = req.url.includes('/events') ? 'event' : 'user'; 
 
     if (method === 'POST' && res.statusCode === 201) {
         res.jsonp({
@@ -71,7 +72,12 @@ router.render = (req, res) => {
         });
     }
 };
-
+server.get('/ims/api/event-names', (req, res) => {
+    const eventTitles = db.events.map(event => event.title);
+    res.jsonp({
+        eventNames: eventTitles
+    });
+});
 server.use(router);
 server.listen(3000, () => {
     console.log('JSON Server is running');
